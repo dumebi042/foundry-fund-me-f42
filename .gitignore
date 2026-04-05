@@ -10,6 +10,7 @@ zkout/
 
 # Docs
 docs/
+lib/
 
 # Dotenv file
 .env
