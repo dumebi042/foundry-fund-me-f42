@@ -16,19 +16,19 @@ contract HelperConfig is Script {
 
     constructor() {
         if (block.chainid == 11155111) {
-            activeNetworkConfig = getorCreateSepoliaEthConfig();
+            activeNetworkConfig = getOrCreateSepoliaEthConfig();
         } else {
-            activeNetworkConfig = getorCreateAnvilEthConfig();
+            activeNetworkConfig = getOrCreateAnvilEthConfig();
         }
     }
 
-    function getorCreateSepoliaEthConfig() public pure returns (NetworkConfig memory) {
+    function getOrCreateSepoliaEthConfig() public pure returns (NetworkConfig memory) {
         NetworkConfig memory sepoliaEthPriceFeed =
             NetworkConfig({priceFeed: 0x694AA1769357215DE4FAC081bf1f309aDC325306});
         return sepoliaEthPriceFeed;
     }
 
-    function getorCreateAnvilEthConfig() public returns (NetworkConfig memory) {
+    function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;
         }
