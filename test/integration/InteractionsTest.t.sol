@@ -13,7 +13,7 @@ contract InteractionsTest is Test {
     uint256 constant SEND_VALUE = 0.1 ether;
     uint256 constant STARTING_BALANCE = 10 ether;
 
-  address USER = makeAddr("user");
+    address USER = makeAddr("user");
 
     function setUp() external {
         // fundMe = new FundMe(0x694AA1769357215DE4FAC081bf1f309aDC325306);
